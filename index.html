@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Hello my first js project</title>
 </head>
 <body>
@@ -12,7 +12,23 @@
         <input required maxlength="15" type="text" placeholder="What is your name?">
         <input type="submit" value="Log In">
     </form>
-    <h1 id="greeting-msg" class="hidden"></h1>
-    <script src="app.js"></script>
+    <div class="hidden">
+        <h1 id="greeting-msg"></h1>
+        <h2 id="clock">00:00:00</h2>
+        <form id="todo-form">
+            <input required type="text" placeholder="Write your todo!">
+            <input type="submit" value="Add todo">
+        </form>
+        <ui id="todo"></ui>
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script src="./js/greeting.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/quote.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/todo.js"></script>
 </body>
 </html>
