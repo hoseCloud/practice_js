@@ -24,7 +24,7 @@ const qutoes = [
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 
-const num = Math.floor(Math.random() * qutoes.length);
+const idx = Math.floor(Math.random() * qutoes.length);
 
-quote.innerHTML = qutoes[num].quote;
-author.innerHTML = qutoes[num].author;
+quote.innerHTML = qutoes[idx].quote;
+author.innerHTML = qutoes[idx].author;
