@@ -6,10 +6,12 @@ const hiddenDiv = document.querySelector("div.hidden");
 const USERNAME_KEY = "username";
 const HIDDEN_CLASSNAME = "hidden";
 
+let username = localStorage.getItem("username");
+
 function onLoginSubmit(event) {
     event.preventDefault();
 
-    const username = loginInput.value;
+    username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
 
     showContents();
@@ -27,4 +29,11 @@ function hideLoginForm() {
     loginForm.classList.add(HIDDEN_CLASSNAME);
 }
 
-loginForm.addEventListener("submit", onLoginSubmit);
+if(username !== null) {
+    showContents();
+    hideLoginForm();
+    printGreetingMsg();
+}
+else {
+    loginForm.addEventListener("submit", onLoginSubmit);
+}
