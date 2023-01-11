@@ -1,7 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const grettingMsg = document.querySelector("#greeting-msg");
-const hidden_div = document.querySelector("div.hidden");
+const hiddenDiv = document.querySelector("div.hidden");
 
 const USERNAME_KEY = "username";
 const HIDDEN_CLASSNAME = "hidden";
@@ -17,7 +17,7 @@ function onLoginSubmit(event) {
     printGreetingMsg();
 }
 function showContents() {
-    hidden_div.classList.remove(HIDDEN_CLASSNAME);
+    hiddenDiv.classList.remove(HIDDEN_CLASSNAME);
 }
 function printGreetingMsg() {
     const username = localStorage.getItem(USERNAME_KEY);
