@@ -23,16 +23,16 @@ function saveTodo() {
 function addTodo(todoObj) {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    const button = document.createElement("button");
+    const button = document.createElement("span");
 
     li.id = todoObj.id;
     span.innerHTML = todoObj.text;
 
-    button.innerHTML = "☄";
+    button.innerHTML = "❌";
     button.addEventListener("click", removeTodo);
 
-    li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(span);
 
     todoList.appendChild(li);
 }
