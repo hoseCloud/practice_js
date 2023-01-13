@@ -2,7 +2,6 @@ function getSuccess(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
-    console.log(weatherURL);
     fetch(weatherURL).then((response) => response.json()).then((data) => {
         const country = data.sys['country'];
         const temps = [data.main['temp'], data.main['temp_min'], data.main['temp_max']];
