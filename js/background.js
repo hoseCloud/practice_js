@@ -4,5 +4,6 @@ const chosenImage = background[background_idx];
 const backgroundImage = document.createElement("img");
 
 backgroundImage.src = `img/${chosenImage}`;
+backgroundImage.id = 'bg';
 
 document.body.appendChild(backgroundImage);
