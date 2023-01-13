@@ -48,7 +48,6 @@ function loadingTodo() {
 
     if(todos !== null) {
         todos.forEach(addTodo);
-        console.log(todos);
     }
     else {
         todos = [];
